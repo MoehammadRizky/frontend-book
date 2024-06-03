@@ -15,6 +15,28 @@ export const bookServices = {
     return data;
   },
 
+  // createData: async ({ name, description, isbn, author, file }: Ibook) => {
+  //   if (!name || !description || !isbn || !author || !file) {
+  //     throw new Error("All field Kudu Diisi!");
+  //   }
+  //   const formData = new FormData();
+  //   formData.append("name", name);
+  //   formData.append("description", description);
+  //   formData.append("isbn", isbn);
+  //   formData.append("author", author);
+  //   formData.append("file", file[0]);
+
+  //   const res = await fetch("http://localhost:8000/books", {
+  //     method: "POST",
+  //     body: formData,
+  //   });
+  //   const data = (await res.json()) as Ibook;
+  //   return data;
+  // },
+
+  // Code above is in not deleted intentionally
+  // DO NOT DELETE
+
   updateData: async (id: string) => {
     const res = await fetch(`${API_URL}/books/${id}`, {
       method: "PATCH",
